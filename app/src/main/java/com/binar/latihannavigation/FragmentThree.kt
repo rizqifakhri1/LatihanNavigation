@@ -28,7 +28,7 @@ class FragmentThree : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val aName = args.name
-        binding.tvNama.text = "Namanya : $aName"
+        binding.tvNama.text = aName
 
        /* val dataempat = arguments?.getParcelable<FragmenInputEmpat>(FragmentFour.DATAEMPAT)*/
 
@@ -65,6 +65,7 @@ class FragmentThree : Fragment() {
             binding.tvShowPenghasilan.text = "Alamat Anda : ${penghasilan}"
             binding.tvShowTanggungan.text = "Pekerjaan Anda : ${tanggungan}"
             binding.btnFragmentKeempat.visibility = View.GONE
+            binding.ivBinardua.visibility = View.GONE
         }
 
         binding.btnFragmentKeempat.setOnClickListener{
