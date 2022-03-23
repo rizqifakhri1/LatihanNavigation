@@ -32,14 +32,29 @@ class FragmentThree : Fragment() {
 
 
         if (dataempat != null){
-            if (dataempat.usia %2 == 0 ){
-                binding.tvUsiaAnda.text = "Usia Anda : Genap"
+            var count = (dataempat.gajiOrtu + dataempat.penghasilan)/ dataempat.tanggungan
+            if (count <= 100000){
+                binding.tvHasil.text = "Beasiswa Gratis"
+            }
+            else if (count in 100000..250000){
+                binding.tvHasil.text = "Potongan Rp. 2.000.000"
+            }
+            else if (count in 250001..500000){
+                binding.tvHasil.text = "Potongan Rp. 1.000.000"
+            }
+            else if (count in 500001..750000){
+                binding.tvHasil.text = "Potongan Rp. 500.000"
+            }
+            else if (count in 750001..1000000){
+                binding.tvHasil.text = "Potongan Rp. 250.000"
             }
             else {
-                binding.tvUsiaAnda.text = "Usia Anda : Ganjil"
+                binding.tvHasil.text = "Mohon maaf anda tidak bisa menerima beasiswa"
             }
-            binding.tvAlamatAnda.text = "Alamat Anda : ${dataempat.alamat}"
-            binding.tvPekerjaanAnda.text = "Pekerjaan Anda : ${dataempat.pekerjaan}"
+
+            binding.tvShowGajiOrtu.text = "Gaji Ortu : ${dataempat.gajiOrtu}"
+            binding.tvShowPenghasilan.text = "Alamat Anda : ${dataempat.penghasilan}"
+            binding.tvShowTanggungan.text = "Pekerjaan Anda : ${dataempat.tanggungan}"
             binding.btnFragmentKeempat.visibility = View.GONE
         }
 

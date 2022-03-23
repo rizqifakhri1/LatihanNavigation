@@ -15,9 +15,18 @@
         android:layout_marginTop="16dp"
         android:text="Ini Halaman Keempat"/>
 
+    <TextView
+        android:id="@+id/tv_gaji_ortu"
+        android:text="Berapa Gaji Orang Tua Kamu?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"/>
+
     <EditText
-        android:id="@+id/et_usia"
-        android:hint="Masukan Usia"
+        android:id="@+id/et_gaji_ortu"
+        android:hint="@string/masukan_nominal"
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,9 +34,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/et_alamat"
-        android:hint="Masukan Alamat"
+    <TextView
+        android:id="@+id/tv_penghasilan_pribadi"
+        android:text="Berapa Penghasilan Kamu?"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -35,8 +44,26 @@
         android:layout_marginTop="16dp"/>
 
     <EditText
-        android:id="@+id/et_pekerjaan"
-        android:hint="Masukan Pekerjaan"
+        android:id="@+id/et_penghasilan"
+        android:hint="@string/masukan_nominal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_tanggungan"
+        android:text="Berapa Jumlah Tanggungan?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/et_tanggungan"
+        android:hint="Masukan Jumlah Tanggungan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

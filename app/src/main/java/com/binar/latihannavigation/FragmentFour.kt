@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.binar.latihannavigation.databinding.FragmentFourBinding
-import com.binar.latihannavigation.databinding.FragmentOneBinding
 
 class FragmentFour : Fragment() {
 
@@ -32,11 +31,11 @@ class FragmentFour : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnFragmentEmpat.setOnClickListener{
-            val usia = binding.etUsia.text.toString().toInt()
-            val alamat = binding.etAlamat.text.toString()
-            val pekerjaan = binding.etPekerjaan.text.toString()
+            val gajiOrtu = binding.etGajiOrtu.text.toString().toInt()
+            val penghasilan = binding.etPenghasilan.text.toString().toInt()
+            val tanggungan = binding.etTanggungan.text.toString().toInt()
 
-            val dataInputEmpat = FragmenInputEmpat(usia, alamat, pekerjaan) //Parcelable
+            val dataInputEmpat = FragmenInputEmpat(gajiOrtu, penghasilan, tanggungan) //Parcelable
             val bundle = bundleOf(
                 DATAEMPAT to dataInputEmpat //Ngirim Bundle
             )

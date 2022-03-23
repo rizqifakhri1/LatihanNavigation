@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class FragmenInputEmpat(
-    val usia : Int,
-    val alamat : String,
-    val pekerjaan: String
+    val gajiOrtu : Int,
+    val penghasilan : Int,
+    val tanggungan: Int
     ) : Parcelable
