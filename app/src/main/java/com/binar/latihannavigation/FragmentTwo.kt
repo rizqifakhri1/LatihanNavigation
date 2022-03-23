@@ -36,9 +36,6 @@ class FragmentTwo : Fragment() {
                 view.findNavController().navigate(actionToFragmentThree)
             }
         }
-/*        //Mendapatkan data argument sesuai dengen key yang dimaksud
-        val aName = arguments?.getString(FragmentOne.EXTRA_NAME)
-        binding.tvNama.text = "Nama Kamu : $aName"*/
     }
 
     override fun onDestroy() {

@@ -3,62 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".FragmentThree">
+    tools:context=".FragmentFour"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_halaman_kedua"
+        android:id="@+id/tv_halaman_keempat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:text="Ini Halaman Ketiga"/>
+        android:text="Ini Halaman Keempat"/>
 
-    <TextView
-        android:id="@+id/tv_nama"
+    <EditText
+        android:id="@+id/et_usia"
+        android:hint="Masukan Usia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Nama Kamu"
-        android:textStyle="bold"/>
+        android:layout_marginTop="16dp"/>
 
-    <TextView
-        android:id="@+id/tv_usia_anda"
+    <EditText
+        android:id="@+id/et_alamat"
+        android:hint="Masukan Alamat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:textStyle="bold"/>
+        android:layout_marginTop="16dp"/>
 
-    <TextView
-        android:id="@+id/tv_alamat_anda"
+    <EditText
+        android:id="@+id/et_pekerjaan"
+        android:hint="Masukan Pekerjaan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/tv_pekerjaan_anda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:textStyle="bold"/>
+        android:layout_marginTop="16dp"/>
 
     <Button
-        android:id="@+id/btn_fragment_keempat"
-        android:layout_width="match_parent"
+        android:id="@+id/btn_empat"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Go to Screen 3"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Go To Halaman Keempat"/>
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>
