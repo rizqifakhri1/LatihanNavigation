@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.binar.latihannavigation.databinding.FragmentThreeBinding
 
@@ -28,7 +29,6 @@ class FragmentThree : Fragment() {
         binding.tvNama.text = "Namanya : $aName"
 
         val dataempat = arguments?.getParcelable<FragmenInputEmpat>(FragmentFour.DATAEMPAT)
-
 
 
         if (dataempat != null){
@@ -59,7 +59,11 @@ class FragmentThree : Fragment() {
         }
 
         binding.btnFragmentKeempat.setOnClickListener{
-            findNavController().navigate(R.id.action_fragmentThree_to_fragmentFour)
+            val actionToFragmentThree =
+                FragmentThreeDirections.actionFragmentThreeToFragmentFour()
+            actionToFragmentThree.name = aName.toString()
+            view.findNavController().navigate(actionToFragmentThree)
+            /*findNavController().navigate(R.id.action_fragmentThree_to_fragmentFour)*/
         }
     }
 

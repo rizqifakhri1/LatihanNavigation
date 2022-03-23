@@ -30,12 +30,15 @@ class FragmentFour : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val aName = FragmentThreeArgs.fromBundle(arguments as Bundle).name
+
         binding.btnFragmentEmpat.setOnClickListener{
+            val nama = aName.toString()
             val gajiOrtu = binding.etGajiOrtu.text.toString().toInt()
             val penghasilan = binding.etPenghasilan.text.toString().toInt()
             val tanggungan = binding.etTanggungan.text.toString().toInt()
 
-            val dataInputEmpat = FragmenInputEmpat(gajiOrtu, penghasilan, tanggungan) //Parcelable
+            val dataInputEmpat = FragmenInputEmpat(nama, gajiOrtu, penghasilan, tanggungan) //Parcelable
             val bundle = bundleOf(
                 DATAEMPAT to dataInputEmpat //Ngirim Bundle
             )

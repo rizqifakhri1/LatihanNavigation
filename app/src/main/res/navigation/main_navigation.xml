@@ -45,5 +45,10 @@
         <action
             android:id="@+id/action_fragmentFour_to_fragmentThree"
             app:destination="@id/fragmentThree" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="Nama Kamu" />
     </fragment>
 </navigation>
