@@ -46,6 +46,7 @@
     <EditText
         android:id="@+id/et_penghasilan"
         android:hint="@string/masukan_nominal"
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -64,6 +65,7 @@
     <EditText
         android:id="@+id/et_tanggungan"
         android:hint="Masukan Jumlah Tanggungan"
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

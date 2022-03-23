@@ -29,6 +29,8 @@ class FragmentThree : Fragment() {
 
         val aName = args.name
         binding.tvNama.text = aName
+        binding.ivBgHasil.visibility = View.GONE
+
 
        /* val dataempat = arguments?.getParcelable<FragmenInputEmpat>(FragmentFour.DATAEMPAT)*/
 
@@ -60,10 +62,11 @@ class FragmentThree : Fragment() {
             else {
                 binding.tvHasil.text = "Mohon maaf anda tidak bisa menerima beasiswa"
             }
-
+            binding.ivBgHasil.visibility = View.VISIBLE
+            binding.tvDescHasil.text = "Berdasarkan data yang telah kamu inputkan, kamu mendapatkan"
             binding.tvShowGajiOrtu.text = "Gaji Ortu : ${gajiOrtu}"
-            binding.tvShowPenghasilan.text = "Alamat Anda : ${penghasilan}"
-            binding.tvShowTanggungan.text = "Pekerjaan Anda : ${tanggungan}"
+            binding.tvShowPenghasilan.text = "Penghasilan Pribadi : ${penghasilan}"
+            binding.tvShowTanggungan.text = "Banyak Tanggungan : ${tanggungan}"
             binding.btnFragmentKeempat.visibility = View.GONE
             binding.ivBinardua.visibility = View.GONE
         }
