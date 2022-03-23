@@ -32,7 +32,7 @@ class FragmentOne : Fragment() {
         binding.btnFragmentKedua.setOnClickListener{
             val mBundle = Bundle ()
             mBundle.putString(EXTRA_NAME, "Binarian Pertama")
-            it.findNavController().navigate(R.id.action_fragmentOne_to_fragmentTwo, mBundle)
+            it.findNavController().navigate(R.id.action_fragmentOne_to_fragmentTwo, mBundle) //Mengirimkan Data ke fragment ke dua
         }
     }
 
