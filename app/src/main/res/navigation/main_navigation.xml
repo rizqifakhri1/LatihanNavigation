@@ -33,5 +33,17 @@
             app:argType="string"
             app:nullable="true"
             android:defaultValue="Namanya Kosong" />
+        <action
+            android:id="@+id/action_fragmentThree_to_fragmentFour"
+            app:destination="@id/fragmentFour" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFour"
+        android:name="com.binar.latihannavigation.FragmentFour"
+        android:label="fragment_four"
+        tools:layout="@layout/fragment_four" >
+        <action
+            android:id="@+id/action_fragmentFour_to_fragmentThree"
+            app:destination="@id/fragmentThree" />
     </fragment>
 </navigation>
