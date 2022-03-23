@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.binar.latihannavigation.databinding.FragmentFourBinding
 
 class FragmentFour : Fragment() {
@@ -17,6 +19,7 @@ class FragmentFour : Fragment() {
 
     private var _binding : FragmentFourBinding? = null
     private val binding get() = _binding!!
+    val args: FragmentFourArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,19 +33,17 @@ class FragmentFour : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val aName = FragmentThreeArgs.fromBundle(arguments as Bundle).name
-
         binding.btnFragmentEmpat.setOnClickListener{
-            val nama = aName.toString()
+
             val gajiOrtu = binding.etGajiOrtu.text.toString().toInt()
             val penghasilan = binding.etPenghasilan.text.toString().toInt()
-            val tanggungan = binding.etTanggungan.text.toString().toInt()
+            val tanggungan =  binding.etTanggungan.text.toString().toInt()
 
-            val dataInputEmpat = FragmenInputEmpat(nama, gajiOrtu, penghasilan, tanggungan) //Parcelable
-            val bundle = bundleOf(
-                DATAEMPAT to dataInputEmpat //Ngirim Bundle
+            val dataInputEmpat = FragmenInputEmpat(
+                gajiOrtu, penghasilan, tanggungan
             )
-            findNavController().navigate(R.id.action_fragmentFour_to_fragmentThree, bundle)
+            val dataKirim = FragmentFourDirections.actionFragmentFourToFragmentThree(args.nameName, dataInputEmpat)
+            it.findNavController().navigate(dataKirim)
 
         }
     }

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/LatihanNavigation/app/src/main/res/drawable/radius.xml" value="0.263" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/LatihanNavigation/app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/LatihanNavigation/app/src/main/res/layout/fragment_four.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/LatihanNavigation/app/src/main/res/layout/fragment_one.xml" value="0.33" />

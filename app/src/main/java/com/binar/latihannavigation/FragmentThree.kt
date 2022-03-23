@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.binar.latihannavigation.databinding.FragmentThreeBinding
 
 class FragmentThree : Fragment() {
     private var _binding: FragmentThreeBinding? = null
     private val binding get() = _binding!!
+    val args : FragmentThreeArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,14 +27,21 @@ class FragmentThree : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val aName = FragmentThreeArgs.fromBundle(arguments as Bundle).name
+        val aName = args.name
         binding.tvNama.text = "Namanya : $aName"
 
-        val dataempat = arguments?.getParcelable<FragmenInputEmpat>(FragmentFour.DATAEMPAT)
+       /* val dataempat = arguments?.getParcelable<FragmenInputEmpat>(FragmentFour.DATAEMPAT)*/
 
+        val terimaData = args.data
 
-        if (dataempat != null){
-            var count = (dataempat.gajiOrtu + dataempat.penghasilan)/ dataempat.tanggungan
+        if (terimaData != null){
+
+            val gajiOrtu = terimaData.gajiOrtu.toString().toInt()
+            val penghasilan = terimaData.penghasilan.toString().toInt()
+            val tanggungan = terimaData.tanggungan.toString().toInt()
+
+            //Rumus
+            var count = (gajiOrtu + penghasilan)/ tanggungan
             if (count <= 100000){
                 binding.tvHasil.text = "Beasiswa Gratis"
             }
@@ -52,16 +61,15 @@ class FragmentThree : Fragment() {
                 binding.tvHasil.text = "Mohon maaf anda tidak bisa menerima beasiswa"
             }
 
-            binding.tvShowGajiOrtu.text = "Gaji Ortu : ${dataempat.gajiOrtu}"
-            binding.tvShowPenghasilan.text = "Alamat Anda : ${dataempat.penghasilan}"
-            binding.tvShowTanggungan.text = "Pekerjaan Anda : ${dataempat.tanggungan}"
+            binding.tvShowGajiOrtu.text = "Gaji Ortu : ${gajiOrtu}"
+            binding.tvShowPenghasilan.text = "Alamat Anda : ${penghasilan}"
+            binding.tvShowTanggungan.text = "Pekerjaan Anda : ${tanggungan}"
             binding.btnFragmentKeempat.visibility = View.GONE
         }
 
         binding.btnFragmentKeempat.setOnClickListener{
             val actionToFragmentThree =
-                FragmentThreeDirections.actionFragmentThreeToFragmentFour()
-            actionToFragmentThree.name = aName.toString()
+                FragmentThreeDirections.actionFragmentThreeToFragmentFour(aName)
             view.findNavController().navigate(actionToFragmentThree)
             /*findNavController().navigate(R.id.action_fragmentThree_to_fragmentFour)*/
         }

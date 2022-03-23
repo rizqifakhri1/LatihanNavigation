@@ -32,10 +32,15 @@
             android:name="name"
             app:argType="string"
             app:nullable="true"
-            android:defaultValue="Namanya Kosong" />
+            android:defaultValue="Nama Kamu" />
         <action
             android:id="@+id/action_fragmentThree_to_fragmentFour"
             app:destination="@id/fragmentFour" />
+        <argument
+            android:name="data"
+            app:argType="com.binar.latihannavigation.FragmenInputEmpat"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/fragmentFour"
@@ -46,7 +51,7 @@
             android:id="@+id/action_fragmentFour_to_fragmentThree"
             app:destination="@id/fragmentThree" />
         <argument
-            android:name="name"
+            android:name="nameName"
             app:argType="string"
             app:nullable="true"
             android:defaultValue="Nama Kamu" />

@@ -31,8 +31,7 @@ class FragmentTwo : Fragment() {
             }
             else {
                 val actionToFragmentThree =
-                    FragmentTwoDirections.actionFragmentTwoToFragmentThree()
-                actionToFragmentThree.name = binding.etName.text.toString()
+                    FragmentTwoDirections.actionFragmentTwoToFragmentThree(binding.etName.text.toString(), null)
                 view.findNavController().navigate(actionToFragmentThree)
             }
         }
