@@ -27,5 +27,11 @@
         android:id="@+id/fragmentThree"
         android:name="com.binar.latihannavigation.FragmentThree"
         android:label="fragment_three"
-        tools:layout="@layout/fragment_three" />
+        tools:layout="@layout/fragment_three" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="Namanya Kosong" />
+    </fragment>
 </navigation>
