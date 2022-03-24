@@ -1,4 +1,4 @@
-# ATugas Chapter Tiga
+# Tugas Chapter Tiga
 
 Tugas studi independen binar academy android development<br/>
 Membuat aplikasi Perhitungan Beasiswa dengan implementasi Navigation Component
