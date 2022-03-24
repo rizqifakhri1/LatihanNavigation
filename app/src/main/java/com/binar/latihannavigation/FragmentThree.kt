@@ -29,7 +29,8 @@ class FragmentThree : Fragment() {
 
         val aName = args.name
         binding.tvNama.text = aName
-        binding.ivBgHasil.visibility = View.GONE
+        binding.tvHasil.visibility = View.GONE
+/*        binding.ivBgHasil.visibility = View.GONE*/
 
 
        /* val dataempat = arguments?.getParcelable<FragmenInputEmpat>(FragmentFour.DATAEMPAT)*/
@@ -46,24 +47,30 @@ class FragmentThree : Fragment() {
             var count = (gajiOrtu + penghasilan)/ tanggungan
             if (count <= 100000){
                 binding.tvHasil.text = "Beasiswa Gratis"
+                binding.tvHasil.visibility = View.VISIBLE
             }
             else if (count in 100000..250000){
                 binding.tvHasil.text = "Potongan Rp. 2.000.000"
+                binding.tvHasil.visibility = View.VISIBLE
             }
             else if (count in 250001..500000){
                 binding.tvHasil.text = "Potongan Rp. 1.000.000"
+                binding.tvHasil.visibility = View.VISIBLE
             }
             else if (count in 500001..750000){
                 binding.tvHasil.text = "Potongan Rp. 500.000"
+                binding.tvHasil.visibility = View.VISIBLE
             }
             else if (count in 750001..1000000){
                 binding.tvHasil.text = "Potongan Rp. 250.000"
+                binding.tvHasil.visibility = View.VISIBLE
             }
             else {
                 binding.tvHasil.text = "Mohon maaf anda tidak bisa menerima beasiswa"
+                binding.tvHasil.visibility = View.VISIBLE
             }
-            binding.ivBgHasil.visibility = View.VISIBLE
-            binding.tvDescHasil.text = "Berdasarkan data yang telah kamu inputkan, kamu mendapatkan"
+/*            binding.ivBgHasil.visibility = View.VISIBLE*/
+            binding.tvDescHasil.text = "Berdasarkan data yang telah kamu input sebelumnya, kamu mendapatkan :"
             binding.tvShowGajiOrtu.text = "Gaji Ortu : ${gajiOrtu}"
             binding.tvShowPenghasilan.text = "Penghasilan Pribadi : ${penghasilan}"
             binding.tvShowTanggungan.text = "Banyak Tanggungan : ${tanggungan}"
