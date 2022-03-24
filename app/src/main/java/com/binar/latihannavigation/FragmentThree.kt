@@ -1,12 +1,12 @@
 package com.binar.latihannavigation
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.binar.latihannavigation.databinding.FragmentThreeBinding
 
@@ -18,12 +18,13 @@ class FragmentThree : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentThreeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -44,7 +45,7 @@ class FragmentThree : Fragment() {
             val tanggungan = terimaData.tanggungan.toString().toInt()
 
             //Rumus
-            var count = (gajiOrtu + penghasilan)/ tanggungan
+            val count = (gajiOrtu + penghasilan)/ tanggungan
             if (count <= 100000){
                 binding.tvHasil.text = "Beasiswa Gratis"
                 binding.tvHasil.visibility = View.VISIBLE
@@ -71,7 +72,7 @@ class FragmentThree : Fragment() {
             }
 /*            binding.ivBgHasil.visibility = View.VISIBLE*/
             binding.tvDescHasil.text = "Berdasarkan data yang telah kamu input sebelumnya, kamu mendapatkan :"
-            binding.tvShowGajiOrtu.text = "Gaji Ortu : ${gajiOrtu}"
+            binding.tvShowGajiOrtu.text = "Gaji Orang Tua : ${gajiOrtu}"
             binding.tvShowPenghasilan.text = "Penghasilan Pribadi : ${penghasilan}"
             binding.tvShowTanggungan.text = "Banyak Tanggungan : ${tanggungan}"
             binding.btnFragmentKeempat.visibility = View.GONE
