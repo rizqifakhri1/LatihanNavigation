@@ -72,9 +72,9 @@ class FragmentThree : Fragment() {
             }
 /*            binding.ivBgHasil.visibility = View.VISIBLE*/
             binding.tvDescHasil.text = "Berdasarkan data yang telah kamu input sebelumnya, kamu mendapatkan :"
-            binding.tvShowGajiOrtu.text = "Gaji Orang Tua : ${gajiOrtu}"
-            binding.tvShowPenghasilan.text = "Penghasilan Pribadi : ${penghasilan}"
-            binding.tvShowTanggungan.text = "Banyak Tanggungan : ${tanggungan}"
+            binding.tvShowGajiOrtu.text = "Gaji Orang Tua : $gajiOrtu"
+            binding.tvShowPenghasilan.text = "Penghasilan Pribadi : $penghasilan"
+            binding.tvShowTanggungan.text = "Banyak Tanggungan : $tanggungan"
             binding.btnFragmentKeempat.visibility = View.GONE
             binding.ivBinardua.visibility = View.GONE
             binding.ivSabrinaDua.visibility = View.VISIBLE
