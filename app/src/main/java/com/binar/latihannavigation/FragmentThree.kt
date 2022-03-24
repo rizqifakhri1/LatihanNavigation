@@ -48,26 +48,32 @@ class FragmentThree : Fragment() {
             if (count <= 100000){
                 binding.tvHasil.text = "Beasiswa Gratis"
                 binding.tvHasil.visibility = View.VISIBLE
+                binding.ivSabrinaDua.visibility = View.VISIBLE
             }
             else if (count in 100000..250000){
                 binding.tvHasil.text = "Potongan Rp. 2.000.000"
                 binding.tvHasil.visibility = View.VISIBLE
+                binding.ivSabrinaDua.visibility = View.VISIBLE
             }
             else if (count in 250001..500000){
                 binding.tvHasil.text = "Potongan Rp. 1.000.000"
                 binding.tvHasil.visibility = View.VISIBLE
+                binding.ivSabrinaDua.visibility = View.VISIBLE
             }
             else if (count in 500001..750000){
                 binding.tvHasil.text = "Potongan Rp. 500.000"
                 binding.tvHasil.visibility = View.VISIBLE
+                binding.ivSabrinaDua.visibility = View.VISIBLE
             }
             else if (count in 750001..1000000){
                 binding.tvHasil.text = "Potongan Rp. 250.000"
                 binding.tvHasil.visibility = View.VISIBLE
+                binding.ivSabrinaDua.visibility = View.VISIBLE
             }
             else {
                 binding.tvHasil.text = "Mohon maaf anda tidak bisa menerima beasiswa"
                 binding.tvHasil.visibility = View.VISIBLE
+                binding.ivSabrinaTiga.visibility = View.VISIBLE
             }
 
             //Menampilkan data ke komponen
@@ -77,7 +83,6 @@ class FragmentThree : Fragment() {
             binding.tvShowTanggungan.text = "Banyak Tanggungan : $tanggungan"
             binding.btnFragmentKeempat.visibility = View.GONE
             binding.ivBinardua.visibility = View.GONE
-            binding.ivSabrinaDua.visibility = View.VISIBLE
             binding.ivBgPurple.visibility = View.VISIBLE
         }
 
