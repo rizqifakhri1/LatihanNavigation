@@ -33,7 +33,7 @@ class FragmentOne : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //Inisiasi Binding pada Button Fragmetn Kedua
+        //Inisiasi Binding pada Button Fragmetn Kedua untuk mengirim bundle
         binding.btnFragmentKedua.setOnClickListener{
             val mBundle = Bundle ()
             mBundle.putString(EXTRA_NAME, "Binarian Pertama")

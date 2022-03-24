@@ -37,7 +37,7 @@ class FragmentFour : Fragment() {
         //Binding btn fragment Empat untuk mengirim data
         binding.btnFragmentEmpat.setOnClickListener{
 
-            //Inisiasi variabel
+            //Inisiasi variabel untuk menerima data
             val gajiOrtu = binding.etGajiOrtu.text.toString().toInt()
             val penghasilan = binding.etPenghasilan.text.toString().toInt()
             val tanggungan =  binding.etTanggungan.text.toString().toInt()
