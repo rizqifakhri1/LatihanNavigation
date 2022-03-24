@@ -11,6 +11,8 @@ import androidx.navigation.fragment.navArgs
 import com.binar.latihannavigation.databinding.FragmentThreeBinding
 
 class FragmentThree : Fragment() {
+
+    //Insiasi Binding dan saveArgs
     private var _binding: FragmentThreeBinding? = null
     private val binding get() = _binding!!
     val args : FragmentThreeArgs by navArgs()
@@ -19,7 +21,7 @@ class FragmentThree : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
+        // Inflate the layout for this fragment - Diganti dengan binding
         _binding = FragmentThreeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -28,23 +30,20 @@ class FragmentThree : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Memampulkan data aName
         val aName = args.name
         binding.tvNama.text = aName
-/*        binding.tvHasil.visibility = View.GONE*/
-/*        binding.ivBgHasil.visibility = View.GONE*/
-
-
-       /* val dataempat = arguments?.getParcelable<FragmenInputEmpat>(FragmentFour.DATAEMPAT)*/
 
         val terimaData = args.data
 
+        // Apabila tidak null makan akan memperoses stament algoritman berikut
         if (terimaData != null){
-
+            //Menerima data untuk di olah rumus beasiswa
             val gajiOrtu = terimaData.gajiOrtu.toString().toInt()
             val penghasilan = terimaData.penghasilan.toString().toInt()
             val tanggungan = terimaData.tanggungan.toString().toInt()
 
-            //Rumus
+            //Rumus Beasiswa
             val count = (gajiOrtu + penghasilan)/ tanggungan
             if (count <= 100000){
                 binding.tvHasil.text = "Beasiswa Gratis"
@@ -70,7 +69,8 @@ class FragmentThree : Fragment() {
                 binding.tvHasil.text = "Mohon maaf anda tidak bisa menerima beasiswa"
                 binding.tvHasil.visibility = View.VISIBLE
             }
-/*            binding.ivBgHasil.visibility = View.VISIBLE*/
+
+            //Menampilkan data ke komponen
             binding.tvDescHasil.text = "Berdasarkan data yang telah kamu input sebelumnya, kamu mendapatkan :"
             binding.tvShowGajiOrtu.text = "Gaji Orang Tua : $gajiOrtu"
             binding.tvShowPenghasilan.text = "Penghasilan Pribadi : $penghasilan"
@@ -81,6 +81,7 @@ class FragmentThree : Fragment() {
             binding.ivBgPurple.visibility = View.VISIBLE
         }
 
+        //Fungis untuk mengirim data dari btn fragment tiga ke empat (nama bindingnya btnFragmentKeempat)
         binding.btnFragmentKeempat.setOnClickListener{
             val actionToFragmentThree =
                 FragmentThreeDirections.actionFragmentThreeToFragmentFour(aName)
@@ -89,6 +90,7 @@ class FragmentThree : Fragment() {
         }
     }
 
+    //Membuat fun onDestroy
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
