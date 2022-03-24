@@ -7,6 +7,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FragmentThree">
 
+    <ImageView
+        android:id="@+id/iv_bg_purple"
+        android:visibility="gone"
+        android:background="@color/purple_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        android:contentDescription="@string/bg_ouput" />
+
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -31,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="14dp"
         android:textColor="@color/white"
-        android:text="Ini Halaman Ketiga"
+        android:text="@string/ini_halaman_ketiga"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -41,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Halo!!!"
+        android:text="@string/sayhello"
         android:textSize="25sp"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +68,7 @@
         android:textSize="50sp"
         android:textStyle="bold"
         android:textColor="@color/kuning"
-        android:text="Rizqi"
+        android:text="@string/default_name"
         android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@id/tv_halo"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,6 +114,7 @@
         android:background="@drawable/radius"
         android:backgroundTint="@color/kuning"
         android:padding="14dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_desc_hasil"/>
@@ -150,7 +164,8 @@
         android:src="@drawable/binardua"
         app:layout_constraintTop_toBottomOf="@id/tv_nama"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/iv_sabrina" />
 
     <Button
         android:id="@+id/btn_fragment_keempat"
@@ -162,10 +177,25 @@
         android:backgroundTint="@color/purple_700"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:text="Next"
+        android:text="@string/next"
         app:layout_constraintTop_toBottomOf="@id/guideline"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_sabrina_dua"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/binartigav2"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="-10dp"
+        android:visibility="invisible"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_show_tanggungan"
+        android:contentDescription="@string/iv_sabrina" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

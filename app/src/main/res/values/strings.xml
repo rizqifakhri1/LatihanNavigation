@@ -5,4 +5,14 @@
     <string name="masukan_nominal">Masukan Nominal</string>
     <string name="icon">icon</string>
     <string name="ini_halaman_pertama">Ini Halaman Pertama</string>
+    <string name="ini_halaman_kedua">Ini Halaman Kedua</string>
+    <string name="tv_nama">Nama Panggilan Kamu Siapa?</string>
+    <string name="et_nama">Nama Kamu</string>
+    <string name="next">Next</string>
+    <string name="iv_sabrina">iv_sabrina</string>
+    <string name="mulai">Mulai</string>
+    <string name="ini_halaman_ketiga">Ini Halaman Ketiga</string>
+    <string name="sayhello">Halo!!!</string>
+    <string name="default_name">Rizqi</string>
+    <string name="bg_ouput">bg_ouput</string>
 </resources>

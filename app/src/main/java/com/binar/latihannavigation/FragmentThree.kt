@@ -29,7 +29,7 @@ class FragmentThree : Fragment() {
 
         val aName = args.name
         binding.tvNama.text = aName
-        binding.tvHasil.visibility = View.GONE
+/*        binding.tvHasil.visibility = View.GONE*/
 /*        binding.ivBgHasil.visibility = View.GONE*/
 
 
@@ -76,6 +76,8 @@ class FragmentThree : Fragment() {
             binding.tvShowTanggungan.text = "Banyak Tanggungan : ${tanggungan}"
             binding.btnFragmentKeempat.visibility = View.GONE
             binding.ivBinardua.visibility = View.GONE
+            binding.ivSabrinaDua.visibility = View.VISIBLE
+            binding.ivBgPurple.visibility = View.VISIBLE
         }
 
         binding.btnFragmentKeempat.setOnClickListener{

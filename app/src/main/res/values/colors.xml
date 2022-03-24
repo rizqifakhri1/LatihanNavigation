@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="kuning">#FCBB3F</color>
+    <color name="purple_light">#8A5389</color>
 </resources>
