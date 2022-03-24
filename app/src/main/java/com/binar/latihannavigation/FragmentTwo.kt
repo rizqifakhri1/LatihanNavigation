@@ -16,7 +16,7 @@ class FragmentTwo : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentTwoBinding.inflate(inflater, container, false)
         return binding.root
@@ -25,7 +25,7 @@ class FragmentTwo : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnFragmentKetiga.setOnClickListener{  view ->
+        binding.btnFragmentKetiga.setOnClickListener{
             if (binding.etName.text.isNullOrEmpty()){
                 Toast.makeText(requireContext(), "Kolom Nama Masih Kosong", Toast.LENGTH_SHORT).show()
             }

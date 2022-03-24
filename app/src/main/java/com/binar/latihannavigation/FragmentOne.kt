@@ -14,13 +14,13 @@ class FragmentOne : Fragment() {
     private val binding get() = _binding!!
 
     companion object {
-        val EXTRA_NAME = "EXTRA_NAME"
+        const val EXTRA_NAME = "EXTRA_NAME"
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentOneBinding.inflate(inflater, container, false)
         return  binding.root
