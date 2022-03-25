@@ -15,5 +15,12 @@
     <string name="sayhello">Halo!!!</string>
     <string name="default_name">Rizqi</string>
     <string name="bg_ouput">bg_ouput</string>
+    <string name="note">** Form tidak boleh kosong atau bernilai nol (0)</string>
+    <string name="ini_halaman_keempat">Ini Halaman Keempat</string>
+    <string name="desc_beasiswa">Untuk mengajukan beasiswa atau potongan harga Course yang ada di binar silakan isikan data-data berikut untuk diverifikasi dan di olah sabrina</string>
+    <string name="tv_gaji">Berapa Gaji Orang Tua Kamu?</string>
+    <string name="tv_penghasilan">Berapa Penghasilan Kamu?</string>
+    <string name="tv_tanggungan">Berapa Jumlah Tanggungan?</string>
+    <string name="et_tanggungan">Masukan Jumlah Tanggungan</string>
 
 </resources>
